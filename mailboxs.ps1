@@ -14,6 +14,8 @@ $user = "<user identity>" # $user = "i.ivanov"
 #$dstmailbox = "Security"
 #$dstfolder = "Restore"
 #Search-Mailbox -Identity $user -SearchDumpsterOnly -TargetMailbox $dstmailbox -TargetFolder $dstfolder
+### Удаление письма у user
+#Get-Mailbox -Identity $user | Search-Mailbox -SearchQuery 'Subject:"*xyz*"'  -DeleteContent
 
 ### Скрыть ящик из адресной книги
 #Get-Mailbox -Identity $user | ft name,HiddenFromAddressListsEnabled
